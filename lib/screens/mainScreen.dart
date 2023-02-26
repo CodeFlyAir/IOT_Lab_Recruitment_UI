@@ -89,7 +89,7 @@ class _MainScreenState extends State<MainScreen> {
                       Container(
                         alignment: Alignment.topRight,
                         height: 23.0,
-                        child: Icon(Icons.settings),
+                        child: const Icon(Icons.settings),
                       )
                     ],
                   ),
@@ -294,7 +294,7 @@ class _MainScreenState extends State<MainScreen> {
                               selectedTextStyle:
                                   const TextStyle(color: Colors.white),
                               unselectedTextStyle:
-                                  TextStyle(color: Color(0xff323F4B)),
+                                  const TextStyle(color: Color(0xff323F4B)),
                               borderWidth: 0.7,
                               borderRadius: 8.0,
                               horizontalPadding: const EdgeInsets.all(0.0),
@@ -338,7 +338,7 @@ class _MainScreenState extends State<MainScreen> {
                                   ),
                                   Text(
                                     displayTotal,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontFamily: 'Mulish',
                                         fontSize: 20.0,
                                         color: Color(0xff323F4B)),
@@ -353,7 +353,7 @@ class _MainScreenState extends State<MainScreen> {
                                   ),
                                   Text(
                                     displayedText,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontFamily: 'Mulish',
                                       fontSize: 12.0,
                                       color: Color(0xff7B8794),
@@ -367,103 +367,41 @@ class _MainScreenState extends State<MainScreen> {
                         const SizedBox(
                           height: 25,
                         ),
-                        Container(
+                        SizedBox(
                           height: 140.0,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
-                              VerticalDivider(
+                              const VerticalDivider(
                                 color: Color(0xff7B8794),
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Color(0xff2F80ED),
-                                  border: Border.all(
-                                      width: 1, color: Color(0xff2F80ED)),
-                                  borderRadius: BorderRadius.circular(32.0),
-                                ),
-                                height: 75.8,
-                                width: 10.0,
-                              ),
-                              VerticalDivider(
+                              verticalBars(75.8),
+                              const VerticalDivider(
                                 color: Color(0xff7B8794),
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Color(0xff2F80ED),
-                                  border: Border.all(
-                                      width: 1, color: Color(0xff2F80ED)),
-                                  borderRadius: BorderRadius.circular(32.0),
-                                ),
-                                height: 37.12,
-                                width: 10.0,
-                              ),
-                              VerticalDivider(
+                              verticalBars(37.12),
+                              const VerticalDivider(
                                 color: Color(0xff7B8794),
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Color(0xff2F80ED),
-                                  border: Border.all(
-                                      width: 1, color: Color(0xff2F80ED)),
-                                  borderRadius: BorderRadius.circular(32.0),
-                                ),
-                                height: 120.64,
-                                width: 10.0,
-                              ),
-                              VerticalDivider(
+                              verticalBars(120.64),
+                              const VerticalDivider(
                                 color: Color(0xff7B8794),
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Color(0xff2F80ED),
-                                  border: Border.all(
-                                      width: 1, color: Color(0xff2F80ED)),
-                                  borderRadius: BorderRadius.circular(32.0),
-                                ),
-                                height: 80.04,
-                                width: 10.0,
-                              ),
-                              VerticalDivider(
+                              verticalBars(80.04),
+                              const VerticalDivider(
                                 color: Color(0xff7B8794),
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Color(0xff2F80ED),
-                                  border: Border.all(
-                                      width: 1, color: Color(0xff2F80ED)),
-                                  borderRadius: BorderRadius.circular(32.0),
-                                ),
-                                height: 110,
-                                width: 10.0,
-                              ),
-                              VerticalDivider(
+                              verticalBars(110.0),
+                              const VerticalDivider(
                                 color: Color(0xff7B8794),
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Color(0xff2F80ED),
-                                  border: Border.all(
-                                      width: 1, color: Color(0xff2F80ED)),
-                                  borderRadius: BorderRadius.circular(32.0),
-                                ),
-                                width: 10.0,
-                              ),
-                              VerticalDivider(
+                              verticalBars(135.0),
+                              const VerticalDivider(
                                 color: Color(0xff7B8794),
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Color(0xff2F80ED),
-                                  border: Border.all(
-                                      width: 1, color: Color(0xff2F80ED)),
-                                  borderRadius: BorderRadius.circular(32.0),
-                                ),
-                                height: 37.12,
-                                width: 10.0,
-                              ),
-                              VerticalDivider(
+                              verticalBars(37.12),
+                              const VerticalDivider(
                                 color: Color(0xff7B8794),
                               ),
                             ],
@@ -472,7 +410,7 @@ class _MainScreenState extends State<MainScreen> {
                         const SizedBox(
                           height: 20.0,
                         ),
-                        Divider(
+                        const Divider(
                           color: Color(0xff7B8794),
                         ),
                       ],
@@ -484,6 +422,18 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  Container verticalBars(double height) {
+    return Container(
+      decoration: BoxDecoration(
+        color: const Color(0xff2F80ED),
+        border: Border.all(width: 1, color: const Color(0xff2F80ED)),
+        borderRadius: BorderRadius.circular(32.0),
+      ),
+      height: height,
+      width: 10.0,
     );
   }
 }
