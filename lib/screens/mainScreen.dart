@@ -15,12 +15,12 @@ class _MainScreenState extends State<MainScreen> {
   int _currentSelectionForChildren = 0;
   int _currentSelectionForCalendar = 0;
 
-  final Map<int, Widget> _children = {
+  final Map<int, Widget> tabs = {
     0: const Text('STATISTICS'),
     1: const Text('JOURNEY'),
   };
 
-  final Map<int, Widget> _calendar = {
+  final Map<int, Widget> timeFrame = {
     0: const Text('WEEK'),
     1: const Text('MONTH'),
     2: const Text('YEAR'),
@@ -82,6 +82,7 @@ class _MainScreenState extends State<MainScreen> {
                           color: Color(0xff323F4B),
                           fontFamily: 'Mulish',
                           fontSize: 23.0,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                       const Spacer(),
@@ -103,7 +104,7 @@ class _MainScreenState extends State<MainScreen> {
                     height: 18.0,
                   ),
                   MaterialSegmentedControl(
-                    children: _children,
+                    children: tabs,
                     selectionIndex: _currentSelectionForChildren,
                     borderColor: const Color(0xff323F4B),
                     selectedColor: const Color(0xff2F80ED),
@@ -285,7 +286,7 @@ class _MainScreenState extends State<MainScreen> {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
                             MaterialSegmentedControl(
-                              children: _calendar,
+                              children: timeFrame,
                               selectionIndex: _currentSelectionForCalendar,
                               borderColor: Color(0xff323F4B),
                               selectedColor: Color(0xff2F80ED),
@@ -327,7 +328,7 @@ class _MainScreenState extends State<MainScreen> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
+                                  const Text(
                                     'TOTAL',
                                     style: TextStyle(
                                       fontFamily: 'Mulish',

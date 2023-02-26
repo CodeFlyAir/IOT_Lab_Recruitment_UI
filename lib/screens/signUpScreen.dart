@@ -2,7 +2,7 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 
 import '../components/RoundedButton.dart';
-import '../components/RoundedContinueButton.dart';
+import '../components/SocialMediaLoginButton.dart';
 import '../constants.dart';
 import 'mainScreen.dart';
 
@@ -60,11 +60,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const Text(
                       'Sign Up',
                       style: TextStyle(
-                        fontFamily: 'Mulish',
-                        // fontWeight: FontWeight.bold,
-                        fontSize: 40.0,
-                        color: Color(0xff323F4B),
-                      ),
+                          fontFamily: 'Mulish',
+                          fontWeight: FontWeight.w700,
+                          fontSize: 35.0,
+                          color: Color(0xff323F4B),
+                          letterSpacing: 1.5),
                     ),
                     const SizedBox(
                       height: 3.0,
@@ -218,26 +218,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       height: 15.0,
                     ),
                     Flexible(
-                      child: RoundedContinueButton(
+                      child: SocialMediaLoginButton(
                         title: 'CONTINUE WITH FACEBOOK',
                         colour: Colors.white,
                         onPressed: () =>
                             Navigator.pushNamed(context, MainScreen.id),
                         icon: Image.asset(
-                          'images/fbButton.png',
+                          'images/fbLogo.png',
                           fit: BoxFit.contain,
                           width: 23.0,
+                          height: 15.0,
                         ),
                       ),
                     ),
                     Flexible(
-                      child: RoundedContinueButton(
+                      child: SocialMediaLoginButton(
                         title: 'CONTINUE WITH TWITTER',
                         colour: Colors.white,
                         onPressed: () =>
                             Navigator.pushNamed(context, MainScreen.id),
                         icon: Image.asset(
-                          'images/twitterButton.png',
+                          'images/twitterLogo.png',
                           fit: BoxFit.contain,
                           width: 23.0,
                         ),

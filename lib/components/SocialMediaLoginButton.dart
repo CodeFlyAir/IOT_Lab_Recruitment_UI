@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RoundedContinueButton extends StatelessWidget {
-  const RoundedContinueButton({
+class SocialMediaLoginButton extends StatelessWidget {
+  const SocialMediaLoginButton({
     super.key,
     required this.title,
     required this.colour,
@@ -17,7 +17,7 @@ class RoundedContinueButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Material(
         elevation: 7.0,
         color: colour,
@@ -29,7 +29,8 @@ class RoundedContinueButton extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                height: 30.0,
+                margin: const EdgeInsets.only(left: 15.0),
+                height: 25.0,
                 child: icon,
               ),
               const SizedBox(
